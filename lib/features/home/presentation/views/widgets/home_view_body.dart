@@ -24,6 +24,10 @@ class HomeViewBody extends StatelessWidget {
           Column(
             children: [
               CustomAppBar(),
+              SizedBox(
+                height: 12,
+              ),
+              Divider(),
             ],
           ),
         ],
