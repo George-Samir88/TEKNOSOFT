@@ -33,9 +33,8 @@ class TaskClassificationListView extends StatelessWidget {
         return Column(
           children: [
             TaskClassificationItem(
-                iconData: value.iconData,
-                title: value.title,
-                subTitle: value.subTitle),
+              taskClassificationModel: value,
+            ),
             index == 0 || index == 1 ? const Divider() : const SizedBox(),
           ],
         );

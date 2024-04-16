@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list_teknosoft/features/home/data/models/task_classification_model.dart';
 
 class TaskClassificationItem extends StatelessWidget {
   const TaskClassificationItem({
     super.key,
-    required this.iconData,
-    required this.title,
-    required this.subTitle,
+    required this.taskClassificationModel,
   });
 
-  final IconData iconData;
-  final String title;
-  final String subTitle;
+  final TaskClassificationModel taskClassificationModel;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Icon(
-          iconData,
+          taskClassificationModel.iconData,
           color: const Color(0xff496BC2),
         ),
         const SizedBox(
@@ -27,7 +24,7 @@ class TaskClassificationItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              title,
+              taskClassificationModel.title,
               style: const TextStyle(
                 color: Color(0xff496BC2),
                 fontSize: 16,
@@ -35,7 +32,7 @@ class TaskClassificationItem extends StatelessWidget {
               ),
             ),
             Text(
-              subTitle,
+              taskClassificationModel.subTitle,
               style: const TextStyle(
                 color: Color(0xffC4C4C6),
                 fontSize: 14,
