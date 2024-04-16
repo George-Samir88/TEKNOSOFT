@@ -50,7 +50,7 @@ class TaskCategoryGridView extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           itemCount: 4,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 8),
+              crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12),
           itemBuilder: (context, index) {
             return TaskActivity(
               beginColor: beginColors[index],
