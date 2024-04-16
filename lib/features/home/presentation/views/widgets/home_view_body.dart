@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/custom_background.dart';
 import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/task_category_grid_view.dart';
 import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/task_classification_list.dart';
 
@@ -9,16 +10,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xffF5F8FF), Color(0xffAFD1EC)],
-        ),
-      ),
-      child: const Column(
+    return const CustomBackGround(
+      child: Column(
         children: [
           SizedBox(
             height: 20,
