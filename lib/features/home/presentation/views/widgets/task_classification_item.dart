@@ -3,36 +3,42 @@ import 'package:flutter/material.dart';
 class TaskClassificationItem extends StatelessWidget {
   const TaskClassificationItem({
     super.key,
+    required this.iconData,
+    required this.title,
+    required this.subTitle,
   });
+
+  final IconData iconData;
+  final String title;
+  final String subTitle;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Icon(
-          Icons.sunny,
-          color: Color(0xff496BC2),
+          iconData,
+          color: const Color(0xff496BC2),
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'My Day',
-              style: TextStyle(
+              title,
+              style: const TextStyle(
                 color: Color(0xff496BC2),
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
               ),
             ),
             Text(
-              '7 tasks',
-              style: TextStyle(
+              subTitle,
+              style: const TextStyle(
                 color: Color(0xffC4C4C6),
                 fontSize: 14,
-                fontWeight: FontWeight.w600,
               ),
             ),
           ],

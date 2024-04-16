@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/task_classification_item.dart';
+import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/task_classification_list.dart';
 
 import 'custom_app_bar.dart';
 
@@ -29,7 +29,10 @@ class HomeViewBody extends StatelessWidget {
                 height: 12,
               ),
               Divider(),
-              TaskClassificationItem(),
+              SizedBox(
+                height: 12,
+              ),
+              TaskClassificationListView(),
             ],
           ),
         ],
