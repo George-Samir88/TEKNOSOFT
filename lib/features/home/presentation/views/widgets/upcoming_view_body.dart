@@ -14,10 +14,28 @@ class UpcomingViewBody extends StatelessWidget {
       padding: 10,
       child: Column(
         children: [
-          SizedBox(
-            height: 10,
+          Column(
+            children: [
+              SizedBox(
+                height: 10,
+              ),
+              CustomUpcomingAppBar(),
+            ],
           ),
-          CustomUpcomingAppBar(),
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Divider(
+                  thickness: 0.5,
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+
+              ],
+            ),
+          ),
         ],
       ),
     );
