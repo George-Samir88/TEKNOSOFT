@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/custom_floating_action_button.dart';
 import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/upcoming_view_body.dart';
 
 class UpcomingView extends StatelessWidget {
@@ -7,8 +8,10 @@ class UpcomingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(child: UpcomingViewBody()),
+      body: SafeArea(
+        child: UpcomingViewBody(),
+      ),
+      floatingActionButton: CustomFloatingActionButton(),
     );
   }
 }
-
