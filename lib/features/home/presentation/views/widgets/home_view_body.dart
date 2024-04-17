@@ -11,22 +11,28 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackGround(
-      child: Column(
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          CustomAppBar(),
-          SizedBox(
-            height: 12,
-          ),
-          Divider(),
-          SizedBox(
-            height: 12,
-          ),
-          TaskClassificationListView(),
-          SizedBox(
-            height: 25,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20,
+                ),
+                CustomAppBar(),
+                SizedBox(
+                  height: 12,
+                ),
+                Divider(),
+                SizedBox(
+                  height: 12,
+                ),
+                TaskClassificationListView(),
+                SizedBox(
+                  height: 25,
+                ),
+              ],
+            ),
           ),
           TaskCategoryGridView(),
         ],

@@ -34,9 +34,7 @@ class TaskActivity extends StatelessWidget {
             taskClassificationModel.iconData,
             color: Colors.white,
           ),
-          const SizedBox(
-            height: 18,
-          ),
+          const Spacer(),
           Text(
             taskClassificationModel.title,
             style: const TextStyle(

@@ -45,19 +45,16 @@ class TaskCategoryGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.builder(
-          physics: const BouncingScrollPhysics(),
-          itemCount: 4,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12),
-          itemBuilder: (context, index) {
-            return TaskActivity(
-              beginColor: beginColors[index],
-              endColor: endColors[index],
-              taskClassificationModel: taskClassificationModel[index],
-            );
-          }),
-    );
+    return SliverGrid.builder(
+        itemCount: 4,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12),
+        itemBuilder: (context, index) {
+          return TaskActivity(
+            beginColor: beginColors[index],
+            endColor: endColors[index],
+            taskClassificationModel: taskClassificationModel[index],
+          );
+        });
   }
 }
