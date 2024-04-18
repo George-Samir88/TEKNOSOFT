@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class CalendarView extends StatelessWidget {
-  const CalendarView({super.key});
+class CalendarSevenDaysView extends StatelessWidget {
+  const CalendarSevenDaysView({super.key});
 
   @override
   Widget build(BuildContext context) {

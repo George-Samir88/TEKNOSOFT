@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/calendar_widget.dart';
+import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/calendar_seven_days_view.dart';
 import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/custom_background.dart';
 
 import 'custom_upcoming_appBar.dart';
@@ -33,7 +33,7 @@ class UpcomingViewBody extends StatelessWidget {
                 SizedBox(
                   height: 12,
                 ),
-                CalendarView(),
+                CalendarSevenDaysView(),
               ],
             ),
           ),
