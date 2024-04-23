@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/calendar_header.dart';
-import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/calendar_seven_days_view.dart';
 import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/custom_background.dart';
-import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/upcoming_tasks_item.dart';
+import 'package:to_do_list_teknosoft/features/home/presentation/views/widgets/upcoming_tasks_item_list_view.dart';
 
+import 'custom_calendar_section.dart';
 import 'custom_upcoming_appBar.dart';
 
 class UpcomingViewBody extends StatelessWidget {
@@ -25,25 +24,13 @@ class UpcomingViewBody extends StatelessWidget {
               CustomUpcomingAppBar(),
             ],
           ),
-          Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Divider(
-                  thickness: 0.5,
+          Expanded(
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: CustomCalendarSection(),
                 ),
-                SizedBox(
-                  height: 12,
-                ),
-                CalendarHeader(),
-                SizedBox(
-                  height: 12,
-                ),
-                CalendarSevenDaysView(),
-                SizedBox(
-                  height: 30,
-                ),
-                UpcomingTasksItem(),
+                UpcomingTasksItemListView(),
               ],
             ),
           ),
