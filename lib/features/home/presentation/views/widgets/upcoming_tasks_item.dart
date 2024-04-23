@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class UpcomingTasksItem extends StatelessWidget {
+class UpcomingTasksItem extends StatefulWidget {
   const UpcomingTasksItem({super.key});
+
+  @override
+  State<UpcomingTasksItem> createState() => _UpcomingTasksItemState();
+}
+
+class _UpcomingTasksItemState extends State<UpcomingTasksItem> {
+  bool isImportantTask = false;
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +81,22 @@ class UpcomingTasksItem extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.star_border,
-              size: 26,
-              color: Colors.grey,
-            ),
+            onPressed: () {
+              setState(() {
+                isImportantTask = !isImportantTask;
+              });
+            },
+            icon: isImportantTask
+                ? const Icon(
+                    Icons.star_border,
+                    size: 28,
+                    color: Colors.grey,
+                  )
+                : const Icon(
+                    Icons.star,
+                    size: 28,
+                    color: Colors.green,
+                  ),
           ),
         ],
       ),
